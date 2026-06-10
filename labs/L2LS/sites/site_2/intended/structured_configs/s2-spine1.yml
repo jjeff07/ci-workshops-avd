@@ -250,6 +250,17 @@ vlan_interfaces:
     - MY_FABRIC
     tags:
     - DMZ
+- name: Vlan45
+  description: Forty-five
+  shutdown: false
+  ip_address: 10.45.45.2/24
+  ip_virtual_router_addresses:
+  - 10.45.45.1
+  metadata:
+    tenants:
+    - MY_FABRIC
+    tags:
+    - Guest
 vlan_internal_order:
   allocation: ascending
   range:
@@ -277,6 +288,11 @@ vlans:
     - MY_FABRIC
 - id: 40
   name: Forty
+  metadata:
+    tenants:
+    - MY_FABRIC
+- id: 45
+  name: Forty-five
   metadata:
     tenants:
     - MY_FABRIC
